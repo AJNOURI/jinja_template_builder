@@ -1,0 +1,34 @@
+# YAML
+hostname: 1
+custVrfName: &custVrf1 vrf1
+custVrfAs: &custAs1 1000
+custVrfId: *custAs1
+
+peCeInt: fa0/0
+peCeSubnet: 192.168.10.
+peCehost: 100
+peCeMask: 255.255.255.0
+
+loInt: &looIntName1 loo0
+loSubnet: 1.1.1.
+lohost: 1
+loMask: 255.255.255.255
+
+coreInt: fa0/1
+coreSubnet: 192.168.41.
+corehost: 1
+coreMask: 255.255.255.0
+ospfId: 666
+coreOspfArea: 0
+
+coreBgpAs: *custAs1
+rrIP: 192.168.41.1
+loInt: *looIntName1
+
+custVrfName: *custVrf1
+peCeSubnet: 192.168.10.
+peCehost: 100
+peCeMask: 255.255.255.0
+XceIp: 1
+
+routerid: *looIntName1
